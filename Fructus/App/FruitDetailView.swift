@@ -29,7 +29,7 @@ struct FruitDetailView: View {
                             .multilineTextAlignment(.leading)
                         
                         //Nutrients
-                        
+                        FruitNutrientView(fruit: fruit)
                         
                         //Subheadline
                         Text("Learn more about \(fruit.title)".uppercased())
@@ -39,9 +39,11 @@ struct FruitDetailView: View {
                         //Description
                         Text(fruit.description)
                             .multilineTextAlignment(.leading)
-                        
                                                 
                         //Link
+                        SourceLinkView()
+                            .padding(.top, 10)
+                            .padding(.bottom, 40)
                     }//: VStack
                     .padding(.horizontal, 20)
                     .frame(maxWidth: 640, alignment: .center)
@@ -53,6 +55,7 @@ struct FruitDetailView: View {
             
         }//: Navigation
     }
+    
 }
 
 struct FruitDetailView_Previews: PreviewProvider {
