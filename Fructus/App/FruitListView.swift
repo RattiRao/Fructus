@@ -9,6 +9,7 @@ import SwiftUI
 
 struct FruitListView: View {
     var fruits: [Fruit] = arrFruit
+    @State private var isSettingShow = false
     var body: some View {
         NavigationView{
             List{
@@ -22,6 +23,15 @@ struct FruitListView: View {
                 }
             }
             .navigationTitle("Fruits")
+            .navigationBarItems(trailing: Button(action: {
+                isSettingShow = true
+            }){
+                Image(systemName: "slider.horizontal.3")
+            }
+                                    .sheet(isPresented: $isSettingShow){
+                SettingsView()
+            }
+            )
         }
         .accentColor(.black)
     }
