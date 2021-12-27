@@ -28,6 +28,17 @@ struct SettingsView: View {
                     } label: {
                         SettingsLabelView(lblTitle: "Fructus", lblImg: "info.circle")
                     }
+                    
+                    GroupBox {
+                        SettingsRowView(name: "Developer", content: "John / Jane")
+                        SettingsRowView(name: "Designer", content: "Robert Petras")
+                        SettingsRowView(name: "Compatibility", content: "iOS 14")
+                        SettingsRowView(name: "Website" , linkLabel: "SwiftUI Masterclass" , linkDestination: "swiftuimasterclass.com")
+                        
+                    } label: {
+                        SettingsLabelView(lblTitle: "Application", lblImg: "apps.iphone")
+                    }
+
                 }
                 .padding()
             }//: SCROLLVIEW

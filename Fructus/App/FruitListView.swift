@@ -41,5 +41,6 @@ struct FruitListView: View {
 struct FruitListView_Previews: PreviewProvider {
     static var previews: some View {
         FruitListView(fruits: arrFruit)
+            .preferredColorScheme(.light)
     }
 }
